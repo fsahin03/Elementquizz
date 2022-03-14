@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Elementquiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkD-Z9-pQw">
@@ -52,6 +52,9 @@
                                     <segment title="Flash Cards"/>
                                     <segment title="Quiz"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchModes:" destination="BYZ-38-t0r" eventType="valueChanged" id="GV0-13-gZu"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RPM-hD-p2A">
                                 <rect key="frame" x="125" y="444" width="140" height="34"/>
@@ -70,6 +73,8 @@
                         <outlet property="answerLabel" destination="NkD-Z9-pQw" id="kIg-ft-cUP"/>
                         <outlet property="imageView" destination="VgA-4g-u25" id="3U4-bS-bj9"/>
                         <outlet property="modeSelector" destination="GrB-Uw-j4Y" id="IHe-9g-VfF"/>
+                        <outlet property="nextButton" destination="xBb-BN-q7C" id="bRr-mL-EKa"/>
+                        <outlet property="showAnswerButton" destination="9pU-25-O4N" id="vlc-xL-Mkk"/>
                         <outlet property="textField" destination="RPM-hD-p2A" id="9pE-Xi-hok"/>
                     </connections>
                 </viewController>
